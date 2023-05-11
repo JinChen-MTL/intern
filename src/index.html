@@ -11,15 +11,89 @@
       href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
       rel="stylesheet"
     />
+    <style>
+      .container {
+        max-width: 800px;
+        margin: 6px auto 0;
+        overflow: hidden;
+      }
+
+      .rectangle span a {
+        font-size: 20px;
+        font-weight: bold;
+        color: #fff; /* change the font color to white */
+        text-align: center;
+        text-decoration: none; /* remove the underline */
+      }
+
+      .rectangle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: calc(25% - 10px);
+        height: 150px;
+        margin: 5px;
+        border-radius: 10px;
+        background-color: #007bff;
+        transition: all 0.2s ease-in-out;
+      }
+      .row {
+        display: flex;
+        justify-content: center; /* center the rectangles in the second row */
+        margin: 10px 0;
+      }
+      .rectangle span {
+        display: inline-block;
+        font-size: 20px;
+        font-weight: bold;
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        transition: all 0.2s ease-in-out;
+      }
+
+      .rectangle:hover {
+        transform: scale(1.1);
+      }
+
+      .rectangle:hover span {
+        font-size: 24px;
+        color: #007bff;
+      }
+
+      .rectangle.active {
+        transform: scale(1.1);
+      }
+    </style>
     <title>Bootstrap Example</title>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript">
+      const bubbles = document.querySelectorAll('.bubble');
+      bubbles.forEach((bubble) => {
+        bubble.addEventListener('click', () => {
+          bubble.classList.add('active');
+          setTimeout(() => {
+            window.location.href = 'https://www.example.com';
+          }, 1000);
+        });
+      });
+    </script>
   </head>
   <body class="p-3 m-0 border-0 bd-example">
-    <!-- Example Code -->
-
+    <!-- nevbar -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a href="https://www.concordrobots.com/index.php?route=common/home"
+          ><img
+            class="lazyautosizes lazyloaded"
+            data-sizes="auto"
+            src="https://www.concordrobots.com/image/catalog/logo/logo.png"
+            data-src="https://www.concordrobots.com/image/catalog/logo/logo.png"
+            title="ConcordRobots"
+            alt="ConcordRobots"
+            sizes="208px"
+        /></a>
+
         <button
           class="navbar-toggler"
           type="button"
@@ -76,5 +150,105 @@
         </div>
       </div>
     </nav>
+    <!-- carousel -->
+    <div id="carouselExampleIndicators" class="carousel slide">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="3"
+          aria-label="Slide 4"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="4"
+          aria-label="Slide 5"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="panda.jpg" class="d-block w-100" alt="..." />
+        </div>
+        <div class="carousel-item">
+          <img src="restaurant.jpg" class="d-block w-100" alt="..." />
+        </div>
+        <div class="carousel-item">
+          <img src="restaurant.jpg" class="d-block w-100" alt="..." />
+        </div>
+        <div class="carousel-item">
+          <img src="restaurant.jpg" class="d-block w-100" alt="..." />
+        </div>
+        <div class="carousel-item">
+          <img src="restaurant.jpg" class="d-block w-100" alt="..." />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!-- choice -->
+    <div class="container">
+      <div class="row">
+        <div class="rectangle">
+          <span> <a href="www.facebook.com">TRAVEL AGENCY</a> </span>
+        </div>
+        <div class="rectangle">
+          <span> <a href="www.facebook.com">Hotel</a> </span>
+        </div>
+        <div class="rectangle">
+          <span> <a href="www.facebook.com">Reestruant</a> </span>
+        </div>
+        <div class="rectangle">
+          <span> <a href="www.facebook.com">Shopping Center</a> </span>
+        </div>
+        <div class="rectangle">
+          <span> <a href="www.facebook.com">Tourism Attraction</a> </span>
+        </div>
+        <div class="rectangle">
+          <span> <a href="www.facebook.com">Museum</a> </span>
+        </div>
+        <div class="rectangle">
+          <span> <a href="demo.php">Transportation Companies</a> </span>
+        </div>
+      </div>
+    </div>
+    <!-- chatgpt -->
+    <div class="container"></div>
   </body>
 </html>
