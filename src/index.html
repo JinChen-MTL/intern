@@ -23,6 +23,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
 
     <link rel=stylesheet
     href=https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css
@@ -45,7 +49,24 @@
         text-decoration: none; /* remove the underline */
       }
       .btn1 {
-        height: 150px;
+      }
+
+      .btn1-success {
+        background-color: blue;
+      }
+      .btn1 span {
+        display: block;
+        padding: 0 10px;
+      }
+      .btn1 a {
+        color: inherit;
+        text-decoration: none;
+      }
+      .btn-fixed-width {
+        width: 100px; /* set fixed width here */
+      }
+      .btn1 {
+        height: 200px;
         margin: 5px;
         border-radius: 10px;
         background-color: #007bff;
@@ -271,56 +292,57 @@
     </div>
     <!-- direction -->
     <div class="bg-white text-black">
-      <p class="text-center">Our robots supports following features:</p>
+      <h3 class="text-center bold">Our robots supports following features:</h3>
     </div>
     <!---choicee-->
-
-    <div class="d-grid gap1">
+    <div class="d-grid gap-1">
       <button type="button" class="btn1 btn1-primary mb-1">
-        <span> <a href="www.facebook.com" style="">TRAVEL AGENCY</a> </span>
+        <span><a href="www.facebook.com">TRAVEL AGENCY</a></span>
       </button>
       <div id="full" class="d-flex mb-1">
-        <button type="button" class="btn1 btn1-success flex-fill me-1">
-          <span> <a href="www.facebook.com">Reestruant</a> </span>
+        <button
+          type="button"
+          class="btn1 btn1-success flex-fill me-1 btn-fixed-width"
+        >
+          <span><a href="www.facebook.com">Reestruant</a></span>
         </button>
-        <button type="button" class="btn1 btn1-success flex-fill me-1">
-          <span> <a href="www.facebook.com">Hotel</a> </span>
-        </button>
-        <button type="button" class="btn1 btn1-success flex-fill">
-          <span> <a href="www.facebook.com">Hotel</a> </span>
+        <button
+          type="button"
+          class="btn1 btn1-success flex-fill me-1 btn-fixed-width"
+        >
+          <span><a href="www.facebook.com">Hotel</a></span>
         </button>
       </div>
       <div id="full" class="d-flex mb-1">
-        <button type="button" class="btn1 btn1-success flex-fill me-1">
-          <span> <a href="www.facebook.com">Hotel</a> </span>
+        <button
+          type="button"
+          class="btn1 btn1-success flex-fill me-1 btn-fixed-width"
+        >
+          <span><a href="www.facebook.com">Reestruant</a></span>
         </button>
-        <button type="button" class="btn1 btn1-success flex-fill me-1">
-          <span> <a href="www.facebook.com">Hotel</a> </span>
+        <button
+          type="button"
+          class="btn1 btn1-success flex-fill me-1 btn-fixed-width"
+        >
+          <span><a href="www.facebook.com">Hotel</a></span>
         </button>
-        <button type="button" class="btn1 btn1-success flex-fill">
-          <span> <a href="www.facebook.com">Hotel</a> </span>
+      </div>
+      <div id="full" class="d-flex mb-1">
+        <button
+          type="button"
+          class="btn1 btn1-success flex-fill me-1 btn-fixed-width"
+        >
+          <span><a href="www.facebook.com">Reestruant</a></span>
+        </button>
+        <button
+          type="button"
+          class="btn1 btn1-success flex-fill me-1 btn-fixed-width"
+        >
+          <span><a href="www.facebook.com">Hotel</a></span>
         </button>
       </div>
     </div>
-    <style>
-      .btn1 {
-        color: white; /* set font color here */
-      }
-      .btn1-primary {
-        background-color: green;
-      }
-      .btn1-success {
-        background-color: green;
-      }
-      .btn1 span {
-        display: block;
-        padding: 0 10px;
-      }
-      .btn1 a {
-        color: white;
-        text-decoration: none;
-      }
-    </style>
+
     <!--checkk-->
 
     <!-- choice -->
@@ -373,7 +395,7 @@
           <div class="input-group-text bg-transparent border-0">
             <button
               class="btn btn-light text-secondary"
-              onclick="alert('speed limited')"
+              onclick="window.close()"
             >
               <i class="fas fa-microphone"></i>
             </button>
@@ -405,7 +427,7 @@
 
     <style>
       img {
-        max-width: 100%;
+        width: auto;
         height: auto;
       }
     </style>
