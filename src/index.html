@@ -17,9 +17,18 @@
     />
     <link
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
+    <link rel=stylesheet href=https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css integrity=undefined crossorigin=anonymous>
     <style>
+      * {
+        margin: 0;
+      }
+
       .container {
         max-width: 800px;
         margin: 6px auto 0;
@@ -109,7 +118,7 @@
       }
     </script>
   </head>
-  <body class="p-3 m-0 border-0 bd-example">
+  <body class="p-0 m-0 border-0 bd-example">
     <!-- nevbar -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
@@ -254,15 +263,22 @@
       </button>
     </div>
     <!-- direction -->
-    <div class="card bg-dark text-white">
-      <p class="card-text">
-        This is a wider card with supporting text below as a natural lead-in to
-        additional content. This content is a little bit longer.
-      </p>
-      <p class="card-text">Last updated 3 mins ago</p>
+    <div class="bg-white text-black">
+      <p class="text-center">Our robots supports following features:</p>
     </div>
     <!-- choice -->
+    <script src=https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js integrity=undefined crossorigin=anonymous></script>
+
+    <div class="d-grid gap1">
+      <div id="full" class="d-flex mb-1">
+        <button type="button" class="btn btn-success flex-fill me-1">shared width button</button>
+        <button type="button" class="btn btn-success flex-fill me-1">shared width button</button>
+        <button type="button" class="btn btn-success flex-fill">shared width button</button>
+      </div>
+      <button type="button" class="btn btn-primary">full width button</button>
+    </div>
     <div class="container">
+      
       <div class="row">
         <div class="rectangle">
           <span> <a href="www.facebook.com">TRAVEL AGENCY</a> </span>
@@ -320,5 +336,6 @@
         </div>
       </div>
     </div>
+    <div></div>
   </body>
 </html>
