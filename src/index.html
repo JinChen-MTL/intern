@@ -33,31 +33,10 @@
     integrity=undefined crossorigin=anonymous>
 
     <style>
-      * {
-        margin: 0;
-      }
-
       .container {
         overflow: hidden;
       }
 
-      .rectangle span a {
-        font-size: 20px;
-        font-weight: bold;
-        color: #fff; /* change the font color to white */
-        text-align: center;
-        text-decoration: none; /* remove the underline */
-      }
-      .btn1 {
-      }
-
-      .btn1-success {
-        background-color: blue;
-      }
-      .btn1 span {
-        display: block;
-        padding: 0 10px;
-      }
       .btn1 a {
         color: inherit;
         text-decoration: none;
@@ -66,73 +45,33 @@
         width: 100px; /* set fixed width here */
       }
       .btn1 {
+        overflow: hidden;
         height: 200px;
         margin: 5px;
         border-radius: 10px;
-        background-color: #007bff;
       }
-      .rectangle {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: calc(25% - 10px);
-        height: 150px;
-        margin: 5px;
-        border-radius: 10px;
-        background-color: #007bff;
-        transition: all 0.2s ease-in-out;
+      button {
+        padding: 0;
+        border: 0;
+        background: transparent;
+      }
+      .img-size img {
+        height: 200px;
+        width: 100%;
       }
       .row {
         display: flex;
-        justify-content: center; /* center the rectangles in the second row */
-        margin: 10px 0;
       }
       .btn1 span {
-        display: inline-block;
-        font-size: 20px;
         font-weight: bold;
         color: black;
         text-align: center;
         text-decoration: none;
-        transition: all 0.2s ease-in-out;
-      }
-
-      .btn1:hover {
-        transform: scale(1.1);
       }
 
       .btn1:hover span {
         font-size: 24px;
         color: white;
-      }
-
-      .btn1.active {
-        transform: scale(1.1);
-      }
-      /*chatbox*/
-      a.nav-link {
-        color: gray;
-        font-size: 18px;
-        padding: 0;
-      }
-
-      .avatar {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        border: 2px solid #e84118;
-        padding: 2px;
-        flex: none;
-      }
-
-      input:focus {
-        outline: 0px !important;
-        box-shadow: none !important;
-      }
-
-      .card-text {
-        border: 2px solid #ddd;
-        border-radius: 8px;
       }
     </style>
     <title>Bootstrap Example</title>
@@ -295,10 +234,15 @@
       <h3 class="text-center bold">Our robots supports following features:</h3>
     </div>
     <!---choicee-->
-    <div class="d-grid gap-1">
-      <button type="button" class="btn1 btn1-primary mb-1">
-        <span><a href="www.facebook.com">TRAVEL AGENCY</a></span>
+
+    <div class="">
+      <button
+        class="btn1 btn1-success me-1 btn-fixed-width img-size"
+        style="width: 100%; overflow: hidden"
+      >
+        <a href="hotel/hotel.html"> <img src="hotel_bar.jpg" /></a>
       </button>
+
       <div id="full" class="d-flex mb-1">
         <button
           type="button"
@@ -310,9 +254,7 @@
           type="button"
           class="btn1 btn1-success flex-fill me-1 btn-fixed-width"
         >
-          <span
-            ><a href="hotel/hotel.html"><img src="hotel_icon.png" /></a
-          ></span>
+          <span><a href="www.facebook.com">tramsport</a></span>
         </button>
       </div>
       <div id="full" class="d-flex mb-1">
@@ -342,70 +284,6 @@
         >
           <span><a href="www.facebook.com">Hotel</a></span>
         </button>
-      </div>
-    </div>
-
-    <!--checkk-->
-
-    <!-- choice -->
-    <!--
-    <div class="container">
-      <div class="row">
-        <div class="rectangle">
-          <span> <a href="www.facebook.com">TRAVEL AGENCY</a> </span>
-        </div>
-        <div class="rectangle">
-          <span> <a href="www.facebook.com">Hotel</a> </span>
-        </div>
-        <div class="rectangle">
-          <span> <a href="www.facebook.com">Reestruant</a> </span>
-        </div>
-        <div class="rectangle">
-          <span> <a href="www.facebook.com">Shopping Center</a> </span>
-        </div>
-        <div class="rectangle">
-          <span> <a href="www.facebook.com">Tourism Attraction</a> </span>
-        </div>
-        <div class="rectangle">
-          <span> <a href="www.facebook.com">Museum</a> </span>
-        </div>
-        <div class="rectangle">
-          <span> <a href="demo.php">Transportation Companies</a> </span>
-        </div>
-      </div>
-    </div>
-  -->
-    <!-- chatgpt -->
-    <div class="container mt-15">
-      <div class="card mx-auto" style="width: auto">
-        <div class="input-group">
-          <div class="input-group-text bg-transparent border-0">
-            <button class="btn btn-light text-secondary">
-              <i class="fas fa-paperclip"></i>
-            </button>
-          </div>
-          <input
-            type="text"
-            class="form-control border-0"
-            placeholder="Chatgpt"
-          />
-          <div class="input-group-text bg-transparent border-0">
-            <button class="btn btn-light text-secondary">
-              <i class="fas fa-smile"></i>
-            </button>
-          </div>
-          <div class="input-group-text bg-transparent border-0">
-            <button
-              class="btn btn-light text-secondary"
-              onclick="window.close()"
-            >
-              <i class="fas fa-microphone"></i>
-            </button>
-          </div>
-          <div class="input-group-text bg-transparent border-0">
-            <button class="btn text-secondary">Send</button>
-          </div>
-        </div>
       </div>
     </div>
 
