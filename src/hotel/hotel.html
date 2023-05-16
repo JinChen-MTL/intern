@@ -16,7 +16,13 @@
       .container {
         overflow: hidden;
       }
-
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        overflow: hidden;
+      }
       .rectangle span a {
         font-size: 20px;
         font-weight: bold;
@@ -31,7 +37,25 @@
         border-radius: 10px;
         background-color: #007bff;
       }
+      .btn1 {
+        width: 300px; /* set a fixed width for all buttons */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
 
+      .btn1:hover {
+        transform: scale(1.035);
+      }
+
+      .btn1:hover span {
+        font-size: 24px;
+        color: white;
+      }
+
+      .btn1.active {
+        transform: scale(1.1);
+      }
       .btn1-success {
         background-color: blue;
       }
@@ -54,12 +78,11 @@
       .btn-fixed-width {
         width: 100px;
       }
-
       .rectangle {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: calc(25% - 10px);
+        flex: 1;
         height: 150px;
         margin: 5px;
         border-radius: 10px;
@@ -75,37 +98,6 @@
 
       .btn1:hover {
         transform: scale(1.035);
-      }
-
-      .custom-list {
-        list-style: none;
-        counter-reset: my-counter;
-      }
-
-      .custom-list li {
-        display: flex;
-        align-items: center;
-      }
-
-      .custom-list li::before {
-        content: counter(my-counter);
-        counter-increment: my-counter;
-        display: inline-block;
-        width: 20px;
-        height: 20px;
-        font-family: 'Font Awesome 5 Free';
-        font-weight: 900;
-        font-size: 16px;
-        text-align: center;
-        line-height: 20px;
-        color: #fff;
-        background-color: #007bff;
-        border-radius: 50%;
-        margin-right: 10px;
-      }
-
-      .custom-list li button {
-        flex-grow: 1;
       }
 
       .btn1:hover span {
@@ -203,27 +195,24 @@
     <!--body-->
 
     <!---choicee-->
-
-    <ol class="custom-list">
-      <li>
-        <button type="button" class="btn1 btn1-primary mb-1">
-          <span><a href="folder/technologies_IA.html">Technologie IA</a></span>
-        </button>
-      </li>
-      <li>
-        <button type="button" class="btn1 btn1-primary mb-1">
-          <span
-            ><a href="folder/Nos_robotique_des_product.html"
-              >Nos robotique des produit</a
-            ></span
-          >
-        </button>
-      </li>
-      <li>
-        <button type="button" class="btn1 btn1-primary mb-1">
-          <span><a href="folder/Concord_robot.html">TRAVEL AGENCY</a></span>
-        </button>
-      </li>
-    </ol>
+    <div class="container">
+      <button type="button" class="btn1 btn1-primary mb-1">
+        <span><a href="folder/technologies_IA.html">Technologie IA</a></span>
+      </button>
+    </div>
+    <div class="container">
+      <button type="button" class="btn1 btn1-primary mb-1">
+        <span
+          ><a href="folder/Nos_robotique_des_product.html"
+            >Nos robotique des produit</a
+          ></span
+        >
+      </button>
+    </div>
+    <div class="container">
+      <button type="button" class="btn1 btn1-primary mb-1">
+        <span><a href="folder/Concord_robot.html">TRAVEL AGENCY</a></span>
+      </button>
+    </div>
   </body>
 </html>
